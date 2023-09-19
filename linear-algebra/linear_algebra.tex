@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+% ------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Lineáris Algebra és Numerikus Módszerei}
+			\HRule{2.0pt} \\ [0.6cm] \LARGE{2023/24/1} \vspace*{10\baselineskip}}
+	}
+	\date{}
+	\author{\textbf{ } }
+	
+	\maketitle
+	\newpage
+	
+	\setcounter{tocdepth}{2}
+	\tableofcontents
+	\newpage
+	
+	% ------------------------------------------------------------------------------
+	
+	\section{Előadás I.}
+		\subsection{Hibaszámítás}
+			\subsubsection{Modellhiba:}
+				A valóságnak csak egy közelítését használjuk a feladat matematikai alakjának a felírásához.
+			\subsubsection{Mérési, öröklött hiba:}
+				 A modell adatai csak közelítő értékek a pontos adatokhoz képest.
+			\subsubsection{Műveleti, input hiba:}
+				A racionális számok csak egy részhalmaza ábrázolható lebegőpontos, aritmetikus környezetben Alul-, túlcsordulás.
+			\subsubsection{Képlethiba:}
+				Egy végtelen eljárást véges lépés után leállítunk. Közelítő algoritmusokat alkalmazunk.
+				
+		\subsection{Számábrázolás}
+			\subsubsection{A nem nulla lebegőpontos számok általános alakja:}
+				\begin{equation}
+					\pm a^k\left(\frac{m_1}{a} + \frac{m_2}{a^2} + \cdot + \frac{m_t}{a^t}\right)
+				\end{equation}
+				$a > 1$ (számábrázolás alapja) \\
+				$t > 1$ (számjegyek száma) \\
+				$k \in \mathbb{Z}$ \\
+				$1 \leq m_1 \leq a - 1$ \\
+				$0 \leq m_i \leq a - 1$ \\
+				\textit{\underline{Megjegyzés 1:} A nullánál minden 0 és +.} \\
+				\textit{\underline{Megjegyzés 2:} $t=8$ egyszeres, $t=16$ dupla pontosság. }
+			\subsubsection{Lebegőpontos számok tárolási alakja:}
+				\begin{equation}
+					\left[\pm, k, m_1, m_2, \dots, m_t\right]
+				\end{equation}
+			\subsubsection{Legnagyobb ábrázolható szám:}
+				\begin{equation}
+					M^\infty = a^U(1-a^{-t})
+				\end{equation}
+			\subsubsection{Legkisebb ábrázolható szám:}
+				\begin{equation}
+					-M^\infty
+				\end{equation}
+			\subsubsection{A nullához legközelebb eső pozitív lebegőpontos szám:}
+				\begin{equation}
+					\varepsilon_0 = a^{L-1}
+				\end{equation}
+			\subsubsection{Relatív pontosság:}
+				\begin{equation}
+					\varepsilon_1 = a^{1-t}
+				\end{equation}
+			\subsubsection{Kerekítés:}
+				\begin{equation}
+					fl(x)=
+						\begin{cases}
+							0 &,\text{ha } |x| < \varepsilon_0 \\
+							\text{Az x-hez legközelebbi lebegőpontos szám} &,\text{ha } \varepsilon_0 \leq |x| \leq M^\infty
+						\end{cases} 
+				\end{equation}
+				\begin{equation}
+					|fl(x) - x| \leq
+						\begin{cases}
+							\varepsilon_0 &,\text{ha } |x| < \varepsilon_0 \\
+							\frac{1}{2}\varepsilon_1|x| &,\text{ha } |x|\geq\varepsilon_0
+						\end{cases}
+				\end{equation}
+				
+		\subsection{Klasszikus Hibaanalízis:}
+			$A$ - A pontos érték.\\
+			$a$ - A pontos érték közelítése.\\			
+			$\Delta a = A - a$ - Az $a$ közelitési hibája.\\			
+			$|\Delta a| = |A-a|$ - Az abszolút hiba.\\			
+			$|\Delta a| \leq \delta a$ - Az abszolút hibakorlát.\\			
+			$A = a \pm \delta a$\\			
+			$A \in \left[a-\delta a, a + \delta a\right]$\\			
+			$\frac{\delta a}{|a|}$ - A relatív hiba.\\
+			
+		\subsection{Abszolút hiba:}
+			\begin{equation}
+				\delta(a \pm b) \leq \delta a + \delta b
+			\end{equation}	
+			\begin{equation}
+				\delta(ab) \approx |a|\delta b + |b|\delta a
+			\end{equation}
+			\begin{equation}		
+				\delta\left(\frac{a}{b}\right) \approx \frac{|a|\delta b + |b|\delta a}{|b|^2}
+			\end{equation}
+			
+			\subsubsection{Példa:}
+			$a = 3 \pm 0.1$\\
+			$b = 4 \pm 0.2$\\
+			$c = 5 \pm 0.3$\\
+			$d = \frac{a+c}{b} = \frac{8}{4} = 2 \pm ?$
+			\begin{equation}
+				\delta d =  \frac{|a+c|\delta b + |b|\delta(a+c)}{|b|^2} =\frac{8\cdot 0.2 + 4 \cdot 0.4}{16} = \frac{3.2}{16} = 0.2 
+			\end{equation}
+			
+			Tehát
+			$d = 2 \pm 0.2$\\
+			
+			A relatív hiba pedig
+			\begin{equation}
+				\frac{\delta d}{|d|} = \frac{0.2}{2} = 0.1
+			\end{equation}
+			\newpage
+			
+		\subsection{Relatív hiba:}
+			\begin{gather}
+				\frac{\delta(a+b)}{|a+b|} = \max \left\{\frac{\delta a}{|a|} , \frac{\delta b}{|b|}\right\}\\
+				\frac{\delta(a-b)}{|a-b|} = \frac{\delta a - \delta b}{|a-b|}\\
+				\frac{\delta(ab)}{|ab|} \approx \frac{\delta a}{|a|} + \frac{\delta b}{|b|}\\
+				\frac{\delta \left(\frac{a}{b}\right)}{\frac{a}{b}} \approx \frac{\delta a}{|a|} + \frac{\delta b}{|b|}
+			\end{gather}
+			
+			\subsubsection{Példa:}
+				$a = 3 \pm 0.1$\\
+				$b = 4 \pm 0.2$\\
+				$c = 5 \pm 0.3$\\
+				$d = \frac{a+c}{b} = 2 \pm ?$
+				\begin{gather}
+					\frac{\delta \left(\frac{a + c}{b}\right)}{\frac{a + c}{b}} \approx \frac{\delta (a + c)}{|a+c|} + \frac{\delta b}{|b|}\\
+					\frac{\delta (a + c)}{|a+c|} = \max \left\{\frac{\delta a}{|a|} , \frac{\delta c}{|c|}\right\} = \max \left\{\frac{0.1}{3} , \frac{0.3}{5}\right\} = 0.06\\
+					\frac{\delta \left(\frac{a + c}{b}\right)}{\frac{a + c}{b}} \approx 0.06 + \frac{0.2}{4} = 0.11
+				\end{gather}
+				
+				Tehát
+				
+				$\frac{\delta d}{d} = 0.11 \Rightarrow \delta d = 2 \cdot 0.11 = 0.22$
+				
+\end{document}
