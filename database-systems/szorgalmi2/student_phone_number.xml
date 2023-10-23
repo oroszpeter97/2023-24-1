@@ -1,0 +1,18 @@
+<student_phone_numbers xmlns:stu_phone="library.stu_phone">
+    <student_phone_number student_phone_number_id="1">
+        <phone_number> 571-776-6905 </phone_number>
+        <student_id> 94391307 </student_id>
+    </student_phone_number>
+    <student_phone_number student_phone_number_id="2">
+        <phone_number> 347-358-2804 </phone_number>
+        <student_id> 69843606 </student_id>
+    </student_phone_number>
+    <student_phone_number student_phone_number_id="3">
+        <phone_number> 561-677-6117 </phone_number>
+        <student_id> 65182451 </student_id>
+    </student_phone_number>
+    <student_phone_number student_phone_number_id="4">
+        <phone_number> 802-224-2705 </phone_number>
+        <student_id> 65182451 </student_id>
+    </student_phone_number>
+</student_phone_numbers>

@@ -1,0 +1,18 @@
+<student_emails xmlns:stu_email="library.stu_email">
+    <student_email student_email_id="1">
+        <email> fmKrFRfrJo@gmail.com </email>
+        <student_id> 94391307 </student_id>
+    </student_email>
+    <student_email student_email_id="2">
+        <email> Ke8bSO8xJo@gmail.com </email>
+        <student_id> 69843606 </student_id>
+    </student_email>
+    <student_email student_email_id="3">
+        <email> TxdFVjWXHK@gmail.com </email>
+        <student_id> 65182451 </student_id>
+    </student_email>
+    <student_email student_email_id="4">
+        <email> Q17kOwPH7Z@gmail.com </email>
+        <student_id> 65182451 </student_id>
+    </student_email>
+</student_emails>

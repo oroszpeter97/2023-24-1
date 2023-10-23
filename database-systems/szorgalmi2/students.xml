@@ -1,0 +1,56 @@
+<students xmlns:s="library.students">
+    <student student_id="94391307">
+        <name>
+            <first_name> Emma </first_name>
+            <last_name> Bohemia </last_name>
+        </name>
+        <address>
+            <address_postal_code> 10032 </address_postal_code>
+            <address_city> New-York </address_city>
+            <adress_street> Peter Lane </adress_street>
+            <address_number> 3 </address_number>
+        </address>
+        <birthday>
+            <birth_year> 2006 </birth_year>
+            <birth_month> 2 </birth_month>
+            <birth_day> 1 </birth_day>
+        </birthday>
+        <staff_id> 50690781 </staff_id>
+    </student>
+    <student student_id="69843606">
+        <name>
+            <first_name> Robin </first_name>
+            <last_name> Baptista </last_name>
+        </name>
+        <address>
+            <address_postal_code> 19104 </address_postal_code>
+            <address_city> Philadelphia </address_city>
+            <adress_street> Culford Road </adress_street>
+            <address_number> 13 </address_number>
+        </address>
+        <birthday>
+            <birth_year> 2005 </birth_year>
+            <birth_month> 2 </birth_month>
+            <birth_day> 3 </birth_day>
+        </birthday>
+        <staff_id> 65182451 </staff_id>
+    </student>
+    <student student_id="65182451">
+        <name>
+            <first_name> Cordelia </first_name>
+            <last_name> Fangula </last_name>
+        </name>
+        <address>
+            <address_postal_code> 19104 </address_postal_code>
+            <address_city> Philadelphia </address_city>
+            <adress_street> Beckett Close </adress_street>
+            <address_number> 64 </address_number>
+        </address>
+        <birthday>
+            <birth_year> 2004 </birth_year>
+            <birth_month> 8 </birth_month>
+            <birth_day> 21 </birth_day>
+        </birthday>
+        <staff_id> 50690781 </staff_id>
+    </student>
+</students>

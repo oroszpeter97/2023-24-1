@@ -1,0 +1,10 @@
+<authentication_system xmlns:auth="library.auth_system">
+    <employee staff_id="50690781"> 
+        <username> ecometha </username>
+        <password> QzXOwRMgLe </password>
+    </employee>
+    <employee staff_id="37065937"> 
+        <username> nderesel </username>
+        <password> wAnQKZXiV4 </password>
+    </employee>
+</authentication_system>

@@ -1,0 +1,32 @@
+<staff xmlns:sta="library.staff"> 
+    <employee staff_id="50690781">
+        <name>
+            <first_name> Bairrfhionn </first_name>
+            <last_name> Pethes </last_name>
+        </name>
+        <phone_numbers>
+            <phone_number> 505-466-7940 </phone_number>
+            <phone_number> 615-258-7302 </phone_number>
+            <phone_number> 715-993-3449 </phone_number>
+        </phone_numbers>
+        <birthday>
+            <birth_year> 1982 </birth_year>
+            <birth_month> 04 </birth_month>
+            <birth_day> 27 </birth_day>
+        </birthday>
+    </employee>
+    <employee staff_id="37065937">
+        <name>
+            <first_name> Jockel </first_name>
+            <last_name> Lu </last_name>
+        </name>
+        <phone_numbers>
+            <phone_number> 321-967-3130 </phone_number>
+        </phone_numbers>
+        <birthday>
+            <birth_year> 1979 </birth_year>
+            <birth_month> 12 </birth_month>
+            <birth_day> 30 </birth_day>
+        </birthday>
+    </employee>
+</staff>

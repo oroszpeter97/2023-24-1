@@ -1,0 +1,38 @@
+<books xmlns:books="library.books">
+    <book book_isbn="9781234567897">
+        <title> Game of wind </title>
+        <author> Julia Black </author>
+        <category> Horror </category>
+        <edition> First </edition>
+        <publication_date> 23/2/2016 </publication_date>
+        <price> 4500 </price>
+        <reserve_date> 4/3/2022 </reserve_date>
+        <return_date> 4/6/2022 </return_date>
+        <student_id> 69843606 </student_id>
+        <publisher_id> 1 </publisher_id>
+    </book>
+    <book book_isbn="3233079183270">
+        <title> Game of wind </title>
+        <author> Julia Black </author>
+        <category> Horror </category>
+        <edition> First </edition>
+        <publication_date> 23/2/2016 </publication_date>
+        <price> 4500 </price>
+        <reserve_date>  </reserve_date>
+        <return_date>  </return_date>
+        <student_id>  </student_id>
+        <publisher_id> 1 </publisher_id>
+    </book>
+    <book book_isbn="8260624469622">
+        <title> Vultures and wives </title>
+        <author> Sandy Gibson </author>
+        <category> Comedy </category>
+        <edition> Third </edition>
+        <publication_date> 2/6/2015 </publication_date>
+        <price> 6500 </price>
+        <reserve_date> 5/1/2022 </reserve_date>
+        <return_date> 5/4/2022 </return_date>
+        <student_id> 94391307 </student_id>
+        <publisher_id> 2 </publisher_id>
+    </book>
+</books>

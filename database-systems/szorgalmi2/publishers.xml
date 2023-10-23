@@ -1,0 +1,8 @@
+<publishers xmlns:pub="library.publishers">
+    <publisher publisher_id="1">
+        <name> Hachette Book Group </name>
+    </publisher>
+    <publisher publisher_id="2">
+        <name> Simon and Schuster </name>
+    </publisher>
+</publishers>

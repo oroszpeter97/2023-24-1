@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage[margin=1cm]{geometry}
+
+\newtheorem{theorem}{Definicio}
+
+\title{Programming Theory}
+\author{Peter Orosz}
+\begin{document}
+	\section{Programfüggvény:}
+	\begin{itemize}
+		\item $D_{p(S)} = \left\{a \in A | S(a) \subseteq A^*\right\}$\\
+			Csak azokban a pontokban van értelme azt vizsgálni hogy hova jut el a program, ahonnan kiindúlva nem hagya el az állapotteret.
+		\item $p(S)(a) = \left\{b \in A | \exists \alpha \in S(a) : \tau (\alpha) = b\right\}$ \\
+			Ahova a program eljut az a sorozat utolsó eleme.
+	\end{itemize}
+	
+	\section{Állapottér:}
+	Legyenek $A_1, A_2, \dots, A_n$ tetszőleges, vagy megszámlálhatóan végtelen halmazok. Az $A = A_1, A_2, \dots, A_n$ halmazt az állapottérnek nevezzük.
+	
+	\section{Sorozat Redukáltja:}
+	Egy $a \in A^{**}$ sorozat redukáltja az a sorozat, amelyet úgy kapunk, hogy az $\alpha$ sorozat minden azonos elemből álló véges részsorozatát a részsorozat egyetlen elemével helyettesítjük.	Jelölése: $red(\alpha)$.
+	
+	\section{Leggyengébb előfeltétel:}
+	Legyen $S$ program és $R$ az $A$ állapotteren értelmezett állítás. Az $S$ program $R$ utófeltételéhez tartozó legygyengébb előfeltétel az $lf(S,R)$ állítás, amelyre $\left[lf(S,R)\right] = \left\{a \in D_{p(S)} | p(S)(a) \subseteq \left[R\right]\right\}$.\\
+	Azokban a pontokban igaz, ahonnan kiindulva az $S$ program biztosan terminál, és az összes lehetséges végállapotra igaz $R$.
+	
+	\section{Félkiterjesztés:}
+	Legyen $B$ altere $A$-nak, $G \subseteq A x A$ feladat, $H \subseteq B$. Azt mondjuk hogy a $G$ félkiterjesztése $H$ felett, ha $pr_B^{-1} \subseteq D_G$ 
+	
+	\section{Feladat Kiterjesztés:}
+	Ha egy megoldó program állapottere bővebb, mint a feladaté, akkor a feladat állapotterét kibővítjük újabb komponensekkel, de értelemszerűen azok értékére nem adunk semmilyen korlátozást.
+\end{document}
